@@ -3,7 +3,12 @@ name: Daily Dashboard Update
 on:
   schedule:
     - cron: '0 8 * * *'  # Jeden Tag um 08:00 UTC
-  workflow_dispatch:  # Manuelles Starten möglich
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Grund für manuelles Update'
+        required: false
+        default: 'Manuelles Update'
 
 jobs:
   update-dashboard:
