@@ -281,3 +281,4 @@ jobs:
         git add index.html
         git commit -m "Auto-update: $(date '+%Y-%m-%d %H:%M')" || exit 0
         git push
+# Schedule aktiv
